@@ -732,9 +732,9 @@ NSString *const InfoAlternateMountNameKey               = @"alternateMount";
             break;
             
         case AVAudioSessionRouteChangeReasonOldDeviceUnavailable:
-            // Stop if player is playing and user removed headphones
+            // Pause if player is playing and user removed headphones
             if (self.isExecuting) {
-                [self stop];
+                [self pause];
             }
             break;
     }
